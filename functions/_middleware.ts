@@ -13,11 +13,6 @@ export const onRequest = async ({ request, next, env }: { request: Request; next
     });
   }
 
-  // パスワードが正しい場合は、クエリパラメータを除去したURLにリダイレクト
-  if (passParam) {
-    url.searchParams.delete("pass");
-    return Response.redirect(url.toString(), 302);
-  }
 
   return next(request);
 }; 
