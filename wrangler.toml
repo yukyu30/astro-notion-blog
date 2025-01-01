@@ -1,0 +1,8 @@
+[build]
+command = "npm run build"
+[build.upload]
+format = "directory"
+dir = "./dist"
+
+[site]
+bucket = "./dist" 
